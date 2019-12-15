@@ -16,6 +16,12 @@ Repository cointener for experiments on inception v3 applied in text independent
 
 ![Install...ok!](https://docs.docker.com/v17.12/toolbox/images/icon-set.png)
 
+## Pull the image 
 
+1.- In docker terminal type:
 
+     $ docker pull zned897/inceptionv3-repo:speakerIDv2
+     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv2
+     $ docker ps -a 
+     
 
