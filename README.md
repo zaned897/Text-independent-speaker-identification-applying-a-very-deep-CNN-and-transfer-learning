@@ -29,14 +29,19 @@ Repository cointener for experiments on inception v3 applied in text independent
      
  ## Train and test
  
- 1.- For trainig data just run the command:
+ 1.- Move your images folder insede the contaier
+     
+     $ docker cp IMAGES_FOLDER_PATH 657cfbcf1caf:/data/ # change  657cfbcf1caf for your own container ID
+     
+ 
+ 2.- For trainig data just run the command:
      
      root@657cfbcf1caf:~# cd / 
-     root@657cfbcf1caf:/# python main_train.py your_train_folder_images_PATH # i.e. /data/trainig_voice/
+     root@657cfbcf1caf:/# python main_train.py your_train_folder_images_PATH # i.e. /data/trainig_voice/,also you can add hyperparameter as: --learning_rate=.005 --how_many_training_steps=100000
     
- 2.- Testing the model. it just evaluate a single image at time
+ 3.- Testing the model. it just evaluate a single image at time
 
-      root@657cfbcf1caf:/# python main_train.py your_test_image_PATH # i. e. /data/testing_voice/Al/Al_1.jpg
+      root@657cfbcf1caf:/# python main_test.py your_test_image_PATH # i. e. /data/testing_voice/Al/Al_1.jpg
      
      
 
