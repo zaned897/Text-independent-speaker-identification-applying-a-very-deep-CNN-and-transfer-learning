@@ -20,8 +20,8 @@ Repository cointener for experiments on inception v3 applied in text independent
 
 1.- In docker terminal type:
 
-     $ docker pull zned897/inceptionv3-repo:speakerIDv2
-     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv2 
+     $ docker pull zned897/inceptionv3-repo:speakerIDv3
+     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv3
      $ docker ps -a 
           CONTAINER ID        IMAGE                           COMMAND             CREATED             STATUS                                              
           657cfbcf1caf        zned897/inceptionv3-repo        "/bin/bash"         3 months ago        Up 4 weeks                       
@@ -29,7 +29,37 @@ Repository cointener for experiments on inception v3 applied in text independent
      
  ## Train and test
  
- 1.- Move your images folder insede the contaier
+ 1.- Move your images folder insede the contaier with the tree clasesslike 
+ 
+ |-IMAGES_FOLDER_PATH
+ 
+ |----CLASE 1
+ 
+ |-------CLASE_01.jpg
+ 
+ |-------CLASE_02.jpg
+ 
+ |----CLASE 2
+ 
+ |----CLASE 3
+ 
+ |----  .
+ 
+ |----  .
+ 
+ |----  .
+ 
+ |----CLASE N
+ 
+ 
+ i.e.: 
+ 
+ |-LOCAL_CORPUS_1/
+ 
+ |----PETER/
+ 
+ |-------- PETER_SPECGRAM_0001.jpg
+ 
      
      $ docker cp IMAGES_FOLDER_PATH 657cfbcf1caf:/data/ # change  657cfbcf1caf for your own container ID
      
@@ -48,7 +78,7 @@ Repository cointener for experiments on inception v3 applied in text independent
 
 1.- In docker:
 
-     $ docker run -it -p 8888:8888 zned897/inceptionv3-repo:speakerIDv2
+     $ docker run -it -p 8888:8888 zned897/inceptionv3-repo:speakerIDv3
      
 2.- In container:
 
