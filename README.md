@@ -21,7 +21,7 @@ Repository cointener for experiments on inception v3 applied in text independent
 1.- In docker terminal type:
 
      $ docker pull zned897/inceptionv3-repo:speakerIDv2
-     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv2 -p 8888:8888
+     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv2 
      $ docker ps -a 
           CONTAINER ID        IMAGE                           COMMAND             CREATED             STATUS                                              
           657cfbcf1caf        zned897/inceptionv3-repo        "/bin/bash"         3 months ago        Up 4 weeks                       
@@ -44,4 +44,17 @@ Repository cointener for experiments on inception v3 applied in text independent
       root@657cfbcf1caf:/# python main_test.py your_test_image_PATH # i. e. /data/testing_voice/Al/Al_1.jpg
      
      
+## Jupyter notebook running on docker container (optional)
+
+1.- In docker:
+
+     $ docker run -it -p 8888:8888 zned897/inceptionv3-repo:speakerIDv2
+     
+2.- In container:
+
+     $ ./run_jupyter.sh --ip 0.0.0.0 --no-browser --allow-root
+     
+3.- In Host open chrome browser (preferably)
+
+     localhost:8888/tree
 
