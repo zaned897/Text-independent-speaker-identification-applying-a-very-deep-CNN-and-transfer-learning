@@ -4,7 +4,7 @@ Repository cointener for experiments on inception v3 applied in text independent
 
 ## Install docker toolbox
 
-1.- go to ![docker tollbox installer](https://docs.docker.com/v17.12/toolbox/toolbox_install_windows/)
+1.- Go to ![docker tollbox installer](https://docs.docker.com/v17.12/toolbox/toolbox_install_windows/)
 
 2.- Make sure your Windows system supports Hardware Virtualization Technology and that virtualization is enabled
 
