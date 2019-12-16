@@ -21,7 +21,22 @@ Repository cointener for experiments on inception v3 applied in text independent
 1.- In docker terminal type:
 
      $ docker pull zned897/inceptionv3-repo:speakerIDv2
-     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv2
+     $ docker run -it -d zned897/inceptionv3-repo:speakerIDv2 -p 8888:8888
      $ docker ps -a 
+          CONTAINER ID        IMAGE                           COMMAND             CREATED             STATUS                                              
+          657cfbcf1caf        zned897/inceptionv3-repo        "/bin/bash"         3 months ago        Up 4 weeks                       
+     $ docker exec -it  657cfbcf1caf  bash # change  657cfbcf1caf for your own container ID
+     
+ ## Train and test
+ 
+ 1.- For trainig data just run the command:
+     
+     root@657cfbcf1caf:~# cd / 
+     root@657cfbcf1caf:/# python main_train.py your_train_folder_images_PATH # i.e. /data/trainig_voice/
+    
+ 2.- Testing the model. it just evaluate a single image at time
+
+      root@657cfbcf1caf:/# python main_train.py your_test_image_PATH # i. e. /data/testing_voice/Al/Al_1.jpg
+     
      
 
