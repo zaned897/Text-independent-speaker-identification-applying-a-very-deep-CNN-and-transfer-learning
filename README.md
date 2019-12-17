@@ -35,9 +35,9 @@ Repository cointener for experiments on inception v3 applied in text independent
  
  |----CLASE 1
  
- |-------CLASE_01.jpg
+ |-------CLASE1_01.jpg
  
- |-------CLASE_02.jpg
+ |-------CLASE1_02.jpg
  
  |----CLASE 2
  
